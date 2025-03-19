@@ -1,0 +1,34 @@
+data:
+  allowedHosts:
+    hosts:
+      - "*"
+  connectorSubtype: database
+  connectorType: destination
+  definitionId: c95aaf33-d828-436b-a766-55dba6a96266
+  dockerImageTag: 0.1.0
+  dockerRepository: airbyte/destination-h2ogpte
+  githubIssueLabel: destination-h2ogpte
+  icon: icon.svg
+  license: MIT
+  name: h2oGPTe
+  registryOverrides:
+    oss:
+      enabled: true
+    cloud:
+      enabled: false
+  releaseStage: alpha
+  resourceRequirements:
+    jobSpecific:
+      - jobType: sync
+        resourceRequirements:
+          memory_limit: 2Gi
+          memory_request: 2Gi
+  documentationUrl: https://docs.airbyte.com/integrations/destinations/h2ogpte
+  tags:
+    - language:python
+  supportLevel: community
+  supportsRefreshes: true
+  supportsFileTransfer: true
+  connectorBuildOptions:
+    baseImage: docker.io/airbyte/python-connector-base:3.0.0@sha256:1a0845ff2b30eafa793c6eee4e8f4283c2e52e1bbd44eed6cb9e9abd5d34d844
+metadataSpecVersion: "1.0"
